@@ -1,24 +1,12 @@
-import c from './Options.module.css';
+import css from './Options.module.css'
 
-const Options = ({ update, total }) => {
+export default function Options({ onLeaveFeedback, resetFeedback, totalFeedback }) {
   return (
-    <div className={c.options}>
-      <button className={c.btn} onClick={() => update('good')}>
-        Good
-      </button>
-      <button className={c.btn} onClick={() => update('neutral')}>
-        Neutral
-      </button>
-      <button className={c.btn} onClick={() => update('bad')}>
-        Bad
-      </button>
-      {total > 0 && (
-        <button className={c.btn} onClick={() => update('reset')}>
-          Reset
-        </button>
-      )}
-    </div>
-  );
-};
-
-export default Options;
+    <ul className= {css.button_wrapper}>
+      <li><button className= {`${css.button_feedback} ${css.good}`} onClick={() => onLeaveFeedback('good')}>Good</button></li>
+      <li><button className= {`${css.button_feedback} ${css.neutral}`} onClick={() => onLeaveFeedback('neutral')}>Neutral</button></li>
+      <li><button className= {`${css.button_feedback} ${css.bad}`} onClick={() => onLeaveFeedback('bad')}>Bad</button></li>
+      {totalFeedback > 0 && <li><button className= {`${css.button_feedback} ${css.reset}`} onClick={() => resetFeedback()}>Reset</button></li>}
+    </ul>
+  )
+}

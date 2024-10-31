@@ -1,20 +1,13 @@
-import c from './Feedback.module.css';
+import css from './Feedback.module.css'
 
-const Feedback = ({ values }) => {
-  const total = values.bad + values.good + values.neutral;
+export default function Feedback({ valueFeedBack, totalFeedback }) {
   return (
-    <div className={c.feedback}>
-      <ul className={c.feedbackList}>
-        <li className={c.feedbackListItem}>Good: {values.good}</li>
-        <li className={c.feedbackListItem}>Neutral: {values.neutral}</li>
-        <li className={c.feedbackListItem}>Bad: {values.bad}</li>
-        <li className={c.feedbackListItem}>Total: {total}</li>
-        <li className={c.feedbackListItem}>
-          Positive: {Math.round((values.good / total) * 100)}%
-        </li>
-      </ul>
-    </div>
-  );
-};
-
-export default Feedback;
+    <ul className={css.feedback_stats_wrapper}>
+      <li className={css.feedback_stats}>Good: <span>{valueFeedBack.good }</span></li>
+      <li className={css.feedback_stats}>Neutral: <span>{valueFeedBack.neutral }</span></li>
+      <li className={css.feedback_stats}>Bad: <span>{valueFeedBack.bad}</span></li>
+      <li className={css.feedback_stats}>Total: <span>{ totalFeedback }</span></li>
+      <li className={css.feedback_stats}>Positive: <span>{Math.round((valueFeedBack.good / totalFeedback) * 100) } %</span></li>
+    </ul>
+  )
+}
