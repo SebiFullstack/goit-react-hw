@@ -1,7 +1,7 @@
 .button_wrapper {
     display: flex;
     gap: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .button_feedback {
@@ -9,12 +9,49 @@
     font-size: 20px;
     line-height: 1.3;
     letter-spacing: 0.05em;
-    color: black;
+    color: #0f0c51;
     border-radius: 5px;
     padding: 12px;
     border: solid 1px rgb(83, 83, 83);
-    background-color: #dbdbdb;
     cursor: pointer;
     transition: background-color 0.3s ease;
-
+    background-color:#c6b5c7;
 }
+
+.good {
+    background-color:#a2b9bc;
+}
+
+.good:hover {
+    background-color: #889aa3;
+}
+
+.good:active {
+    background-color:#777676;
+}
+
+.neutral {
+    background-color:#bccbde;
+}
+
+.neutral:hover {
+    background-color: #9fb3c2;
+}
+
+.neutral:active {
+    background-color: #777676;
+}
+
+
+.bad {
+    background-color: #eea29a;
+}
+
+.bad:hover {
+    background-color: #d68b85;
+}
+
+.reset:hover {
+    background-color:#b2a2b3;
+}
+
