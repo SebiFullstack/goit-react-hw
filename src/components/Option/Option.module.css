@@ -1,0 +1,11 @@
+.options {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.btn {
+    font-size: 14px;
+    padding: 8px;
+    background-color: lightgray;
+}
