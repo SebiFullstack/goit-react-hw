@@ -1,4 +1,4 @@
-import css from './Options.module.css'
+import css from './Options.module.css';
 
 export default function Options({ onLeaveFeedback, resetFeedback, totalFeedback }) {
   return (
